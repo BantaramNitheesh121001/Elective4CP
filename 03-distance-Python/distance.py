@@ -6,4 +6,9 @@
 
 def fun_distance(x1, y1, x2, y2):
 	# your code goes here
-	return 0
+	X = (x2 - x1)**2
+	Y = (y2 - y1)**2
+	d = (X+Y)**(1/2)
+	return int(d)
+
+# print(fun_distance(-20, 23, -15, 68))
