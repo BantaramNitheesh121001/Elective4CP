@@ -32,7 +32,24 @@
 # Hint: Then, you may wish to use diceToOrderedHand(a, b, c) at the end to convert the 3 dice back
 # into a sorted hand.
 # Hint: Also, remember to use % to get the one's digit, and use //= to get rid of the one's digit.
-
 def playstep2(hand, dice):
-	# your code goes here
-	pass
+    hand = str(hand)
+    dice = str(dice)
+    check = set(hand)
+    if len(check)== len(hand):
+        out = str(hand[0])
+        for i in range (1,len(hand)):
+            out += dice[-1:]
+            dice = dice[:len(dice)-1]
+        out = sorted(out,reverse=True)
+        out = "".join(out)
+        return int(out),int(dice)
+    else:
+        out = ""
+        for i in range (1,len(hand)):
+            out += hand[i]
+        out = dice[-1:]+out
+        out = sorted(out,reverse=True)
+        out = "".join(out)
+        dice = dice[:len(dice)-1]
+        return int(out),int(dice)
