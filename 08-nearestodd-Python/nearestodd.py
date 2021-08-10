@@ -6,6 +6,13 @@
 
 
 def fun_nearestodd(n):
-	return 0
+	n = str(n).split(".")
+	if int(n[0])%2 == 0:
+		if int(n[1])>0:
+			return int(n[0])+1
+		else:
+			return int(n[0]) - 1
+	else:
+		return int(n[0])
 
-
+print(fun_nearestodd(12.0))
