@@ -6,4 +6,17 @@
 
 def fun_getinrange(x, bound1, bound2):
 	# your code goes here
-	return -1
+	if bound1 > bound2:
+		if x > bound2 and x < bound1:
+			return x
+		if x < bound2:
+			return bound2
+		return bound1
+	if bound1 < bound2:
+		if x < bound2 and x > bound1:
+			return x
+		if x > bound2:
+			return bound2
+		return bound1
+
+print(fun_getinrange(7, 3, 6))
