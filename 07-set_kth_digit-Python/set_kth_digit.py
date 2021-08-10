@@ -7,5 +7,17 @@
 
 
 def fun_set_kth_digit(n, k, d):
-		return 0
-
+	s = n 
+	n = str(abs(n))
+	if len(n) >= k:
+		n = n[::-1]
+		n = n[:k] + str(d) + n[k+1:]
+		n = int(n[::-1])
+	else:
+		n = d*(10**k)+int(n)
+	if s < 0 :
+		return -n
+	else:
+		return n
+		
+# print(fun_set_kth_digit(-468, 2, 1))
