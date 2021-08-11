@@ -12,10 +12,9 @@
 
 def dicetoorderedhand(a, b, c):
 	# your code goes here
-	output = ""
-	val = [a,b,c]
-	val.sort(reverse=True)
-	for i in val:
-    		output+=str(i)
-	return int(output)
-# print(dicetoorderedhand(3,2,1))
+	val = (a,b,c)
+	mx = max(val)
+	mn = min(val)
+	left = a + b + c - mn - mx
+	return mx*10**(2)+left*10+mn
+# print(dicetoorderedhand(1,2,3))
