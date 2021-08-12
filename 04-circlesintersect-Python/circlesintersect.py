@@ -6,4 +6,14 @@
 
 def fun_circlesintersect(x1, y1, r1, x2, y2, r2):
 	# your code goes here
-	return False 
+	d = fun_distance(x1, y1, x2, y2)
+	if d > r1 + r2:
+		return False
+	return True
+
+def fun_distance(x1, y1, x2, y2):
+	# your code goes here
+	X = (x2 - x1)**2
+	Y = (y2 - y1)**2
+	d = (X+Y)**(1/2)
+	return int(d)
