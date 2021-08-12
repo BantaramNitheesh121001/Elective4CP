@@ -8,4 +8,10 @@
 
 
 def fun_nearestbusstop(street):
-	return -1
+	val = round((street / 8),1)
+	dec = (val*10)%10
+	val = int(val)
+	if dec <= 5:
+		return 8 * val
+	return 8 * (val+1)
+# print (fun_nearestbusstop(13))
