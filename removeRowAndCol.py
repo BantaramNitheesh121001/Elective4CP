@@ -23,6 +23,11 @@
 
 def removeRowAndCol(L, row, col):
     # Your code goes here...
-    pass
+    L = L[:row]+L[row+1:]
+    for i in range(len(L)):
+        L[i] = L[i][:col]+L[i][col+1:]
+    return L
 
 # Write your own test cases.
+L = [ [ 2, 3, 4, 5],[ 8, 7, 6, 5], [ 0, 1, 2, 3] ]
+print(removeRowAndCol(L,1,2))
