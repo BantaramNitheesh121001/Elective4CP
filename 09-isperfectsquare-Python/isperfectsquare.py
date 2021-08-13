@@ -5,4 +5,18 @@
 
 def isperfectsquare(n):
 	# your code goes here
-	pass
+	if ( type(n) is int and n < 0) or type(n) is float:
+		return False
+	if type(n) is int:
+		val = n ** (1/2)
+		if val*val == n:
+			return True
+	if type(n) is str and not n.isalpha():
+		n = int(n)
+		val = n ** (1/2)
+		if val*val == n:
+			return True
+	else:
+		return False
+		
+print(isperfectsquare(25))
