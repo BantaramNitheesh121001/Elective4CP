@@ -6,4 +6,8 @@
 
 def lineintersection(m1, b1, m2, b2):
 	# your code goes here
-	pass
+	m = m1 - m2
+	b = b2 - b1
+	if m1 != m2:
+		return abs(b/m)
+print (lineintersection(4, 27, 9, 17))
