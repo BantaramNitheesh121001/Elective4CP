@@ -13,6 +13,6 @@ def hasconsecutivedigits(n):
 		val = n%10
 		n = n//10
 		val1 = n%10
-		if val == val1 + 1 or val == val1-1:
+		if val == val1 or val == val1:
 			return True
 	return False
