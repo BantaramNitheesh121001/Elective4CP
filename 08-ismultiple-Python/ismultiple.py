@@ -12,5 +12,4 @@ def fun_ismultiple(m, n):
     		return False
 	if m % n == 0:
 		return True
-	else:
-		return False
+	return False
