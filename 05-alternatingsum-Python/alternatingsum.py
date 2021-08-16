@@ -5,7 +5,12 @@
 
 
 
-def fun_alternatingsum(a): 
-	return 0
-
-
+def fun_alternatingsum(a):
+	if len(a) == 0:
+		return 0
+	if len(a) == 1:
+		return a[0]
+	else:
+		return a[0] - fun_alternatingsum(a[1:])
+a = [5,3,8,4]
+print(fun_alternatingsum(a))
