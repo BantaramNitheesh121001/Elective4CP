@@ -5,7 +5,6 @@
 # For example:- 36 is a powerful number. It is divisible by both 3 and square of 3 i.e, 9.
 
 import math
-from typing import Text
 def powerfulnumbers(n):
 	while (n % 2 == 0):
 		power = 0
