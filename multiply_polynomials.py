@@ -8,7 +8,20 @@
 
 def multiplyPolynomials(p1, p2):
     # Your code goes here...
-    pass
+    l = []
+    for i in range (len(p1)+len(p2)-1):
+        l.append(0)
+    for i in range (len(p1)):
+        for j in range (len(p2)):
+            l[i+j] += p1[i] * p2[j]
+    return l
 
 # Write your own test cases
 print ("All test cases passwed...")
+p1 = [2,0,3]
+p2 = [4,5]
+print(multiplyPolynomials(p1,p2))
+p1 = [3,1,2]
+p2 = [-3]
+print(multiplyPolynomials(p1,p2))
+
