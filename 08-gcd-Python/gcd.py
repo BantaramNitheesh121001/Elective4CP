@@ -10,4 +10,12 @@
 
 def gcd(m, n):
 	# your code goes here
-	pass
+	if n == 0:
+		return 1
+	while True:
+		if m%n == 0:
+			return n
+		temp = m
+		m = n
+		n = temp % n
+print(gcd(49, 77777))
