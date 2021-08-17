@@ -8,5 +8,19 @@
 
 
 def fun_interleave(s1,s2):
-	return ""
-	
+	n = min(len(s1),len(s2))
+	output = ""
+	i = 0
+	while True:
+		output += s1[i]+s2[i]
+		if i == n-1:
+			break
+		i += 1
+	if len(s1) > len(s2):
+		output += s1[i+1:]
+		return output
+	elif len(s1) < len(s2):
+		output += s2[i+1:]
+		return output
+	return output
+print(fun_interleave("pto","yhns"))
