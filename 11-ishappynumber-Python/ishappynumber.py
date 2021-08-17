@@ -19,4 +19,20 @@
 
 def ishappynumber(n):
 	# your code goes here
-	pass
+	if n < 0:
+		return False
+	while True:
+		n = sq(n)
+		if n == 1:
+			return True
+		if n < 10:
+			return False
+def sq(n):
+	val = 0
+	while True:
+		if n == 0:
+			return val
+		val += (n%10)**2
+		n = n//10
+
+print (ishappynumber(2))
