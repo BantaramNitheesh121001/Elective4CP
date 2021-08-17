@@ -6,4 +6,11 @@
 
 def isrotated(str1, str2):
 	#Your code goes here
-	pass
+	check = str1
+	while True:
+		str1 = str1[-1] + str1[:len(str1)-1]
+		if check == str1:
+			return False
+		if str1 == str2:
+			return True
+print(isrotated("XYZ","ZXY"))
