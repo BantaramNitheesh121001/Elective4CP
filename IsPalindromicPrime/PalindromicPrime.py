@@ -19,17 +19,14 @@ def Palindromic(n):
     while True:
         if n == 0:
             break
-        val += (n%10) / (10**i)
+        dig = n % 10
+        val = val * 10 + dig
         n = n // 10
-        i += 1
-    val = int(val * (10**(i-1)))
     if check == val:
-        return True
-    return False
+        return val,check
+    return val, check
 
 def isPalindromicPrime(n):
     if Palindromic(n) and prime(n):
         return True
     return False
-
-print(Palindromic(2))

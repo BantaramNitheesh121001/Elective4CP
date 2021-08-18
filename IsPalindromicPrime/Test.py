@@ -1,5 +1,3 @@
-from IsPalindromicPrime.PalindromicPrime import isPalindromicPrime
-from IsPalindromicPrime.IsPalindromicPrime import IsPalindromicPrime
 import os,sys
 sys.path.append(os.getcwd())
 from PalindromicPrime import isPalindromicPrime
