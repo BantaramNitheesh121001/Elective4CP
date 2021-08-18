@@ -25,8 +25,6 @@ def prime(n):
     return True
 
 def IsAdditivePrime(n):
-    if Additive(n):
+    if Additive(n) and prime (n):
         return True
     return False
-
-print (IsAdditivePrime(67))
