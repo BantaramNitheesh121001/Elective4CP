@@ -7,4 +7,23 @@
 
 def issorted(a):
 	# your code goes here
-	pass
+	n = len (a)
+	if n == 0 or n == 1:
+		return True
+	if a[0] >= a[1]:
+		for i in range (n):
+			if i+1 == n:
+				break
+			if a[i] < a[i+1]:
+				return False
+		return True
+	if a[0] <= a[1]:
+		for i in range (n):
+			if i+1 == n:
+				break
+			if a[i] > a[i+1]:
+				return False
+		return True
+
+a = [1,1]
+print(issorted(a))
