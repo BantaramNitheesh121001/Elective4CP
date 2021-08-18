@@ -1,7 +1,8 @@
+from IsPalindromicPrime.PalindromicPrime import isPalindromicPrime
 from IsPalindromicPrime.IsPalindromicPrime import IsPalindromicPrime
 import os,sys
 sys.path.append(os.getcwd())
-from IsPalindromicPrime import IsPalindromicPrime
+from PalindromicPrime import isPalindromicPrime
 import pytest
 
 
@@ -13,4 +14,4 @@ import pytest
 	(373, True), (121, False)
 ])
 def test(m, result):
-    assert IsPalindromicPrime(m) == result
+    assert isPalindromicPrime(m) == result

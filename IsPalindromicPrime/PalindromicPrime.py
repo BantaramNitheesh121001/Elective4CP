@@ -27,7 +27,7 @@ def Palindromic(n):
         return True
     return False
 
-def IsPalindromicPrime(n):
+def isPalindromicPrime(n):
     if Palindromic(n) and prime(n):
         return True
     return False
