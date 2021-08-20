@@ -30,10 +30,9 @@ def topScorer(data):
             else:
                 val += int(data[i][j])
         l.append(val)
-    i = 1
     val = 0
     output = ''
-    while True:
+    for i in range (1,len(l),2):
         if l[i] > val:
             val = l[i]
             output = l[i-1]
