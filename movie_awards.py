@@ -18,4 +18,18 @@
 
 def movieAwards(oscarResults):
     # Your code goes here...
-    pass
+    d = {}
+    for i in range (len(oscarResults)):
+        if oscarResults[i][1] not in d:
+            d[oscarResults[i][1]] = 1
+        else:
+            d[oscarResults[i][1]] += 1
+    return d
+oscarResults = [("Best Picture", "The Shape of Water"), 
+    ("Best Actor", "Darkest Hour"),
+    ("Best Actress", "Three Billboards Outside Ebbing, Missouri"),
+    ("Best Director", "The Shape of Water"),
+    ("Best Supporting Actor", "Three Billboards Outside Ebbing, Missouri"),
+    ("Best Supporting Actress", "I, Tonya"),
+    ("Best Original Score", "The Shape of Water")]
+print(movieAwards(oscarResults))
