@@ -13,13 +13,23 @@ def isLatinSquare(lst):
         for j in range(len(lst[0])):
             if lst[i].count(lst[i][j]) > 1:
                 return False
-
+    l = []
     for i in range (len(lst[0])):
+        m = []
         for j in range(len(lst)):
-            if lst
-            print (lst[j][i])
+            m.append(lst[j][i])
+        l.append(m)
+    for i in range (len(l)):
+        for j in range(len(l[0])):
+            if l[i].count(l[i][j]) > 1:
+                return False
     return True
 
-a =[[1,2,3],[4,5,6],[7,8,9]]
+a =[[1,2,3],[2,3,1],[3,1,2]]
 print(isLatinSquare(a))
-# assert (isLatinSquare(a)==True)
+assert (isLatinSquare(a)==True)
+a = [[1, 2, 3, 4],[2, 1, 4, 3],[3, 4, 1, 2],[4, 3, 2, 1]]
+assert (isLatinSquare(a)==True)
+a = [[1, 2, 3, 2],[2, 1, 4, 3],[3, 4, 1, 2],[4, 3, 2, 1]]
+assert (isLatinSquare(a)==False)
+print("All Test Cases Passed")
