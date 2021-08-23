@@ -13,7 +13,7 @@ def nthwithproperty309(n):
 			count += 1
 		if count == n:
 			break
-		i += 1
+		i = i + 1
 	return i
 
 def property309(n):
