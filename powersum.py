@@ -12,12 +12,11 @@
 
 def power(a, b):
     if b == 0:
-        return 1
+        return a
+    if b % 2 == 0:
+        return power(a,b//2) * power(a,b//2)
     else:
-        return a * power(a, b-1)
-
-
-
+        return a * power(a, b//2)
 
 
 
@@ -29,7 +28,10 @@ def power(a, b):
 
 def powerSum(n, k):
     # Your code goes here...
-    return 0
+    val = 0
+    for i in range (1,n+1):
+        val += power(i,k)
+    return val
 
 # Write your own test cases here...
 assert(powerSum(2,10) == 1025)
