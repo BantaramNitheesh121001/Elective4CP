@@ -12,5 +12,29 @@
 
 import math
 
+l=[1]
+ 
+def print_Kaprekar_nums(start, end):  
+   for i in range(start, end):  
+      sqr = i ** 2  
+      digits = str(sqr)  
+  
+      length = len(digits)  
+      for x in range(1, length):  
+         left = int("".join(digits[:x]))  
+         right = int("".join(digits[x:]))  
+         if ((left + right) == i):
+            if(str(i)[0]!='1' or str(i)[1:]!='0'*(len(str(i))-1)):  
+                    l.append(i)  
+
+print_Kaprekar_nums(1, 100000)
+
+
 def fun_nearestkaprekarnumber(n):
-    return 1
+    if n in l:
+        return n 
+    s=n
+    for i in range(len(l)):
+        if(abs(n-l[i])<s):
+            s=n-l[i]
+    return abs(n-s)
